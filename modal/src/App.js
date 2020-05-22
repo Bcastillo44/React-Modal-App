@@ -34,7 +34,7 @@ class App extends Component {
     this.setState({ show: true});
   }
 
-  // This state is togglable via the showModal and hideModal class properties
+  // This state is togglable via the showModal and hideModal properties
   
   hideModal = (event) => {
     this.setState({ show: false });
@@ -65,9 +65,11 @@ class App extends Component {
     });
   }
 
-//  Added Modal into the App component render method and 
+// Added Modal into the App component render method and 
 // Passed down show and handleClose as props
 // The modal’s this.props.children property is the Advice API component
+
+//onClick event hands both the showModal and the handleNewAdvice
 
 
 render() {
