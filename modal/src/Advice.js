@@ -6,9 +6,6 @@ function Advice (props) {
 
         <h2>{props.advice}</h2>
 
-
-
-
 </div>
 
 }
