@@ -27,10 +27,14 @@ class App extends Component {
     }
 
   };
-  
+  //  created show state
+  // onClick handler will toggle the show state to true below in render
+
   showModal = (event) => {
     this.setState({ show: true});
   }
+
+  // This state is togglable via the showModal and hideModal class properties
   
   hideModal = (event) => {
     this.setState({ show: false });
@@ -61,24 +65,29 @@ class App extends Component {
     });
   }
 
- 
+//  Added Modal into the App component render method and 
+// Passed down show and handleClose as props
+// The modal’s this.props.children property is the Advice API component
+
+
 render() {
 
-  console.log(this.state)
+  // console.log(this.state)
 
     return (
       <div className="container"> 
         <div className="App">
 
         <h1> You Have Come to the "Pool of Advice"</h1>
-        <h2> Click any Cue Ball to get Advice"</h2>
+        <h2> Click any Cue Ball to get Advice</h2>
 
     
         <Modal show={this.state.show} handleClose={this.hideModal} >
           <Advice advice={this.state.advice}/>
         </Modal>
         
-      
+        
+
         <button type='button' className="newAdvice" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>1</button>
         
         <button type='button' className="newAdviceTwo" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>2</button>
@@ -100,15 +109,12 @@ render() {
 
     
         </div>
+
       </div> 
     );
   }
   
 }
-
-
-
-  
 
 
 export default App;
