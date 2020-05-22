@@ -20,9 +20,9 @@ Click on pool ball button to be prompted with a random piece of advice.
 
 ***
 
-## Deployed on GitHub Pages
+## Deployed on Netlify
 
-Visit if you need advice from the "Pool of Advice"
+Visit if you need advice from the "Pool of Advice": https://ga-projects-bcastillo.netlify.app/
 
 ***
 
