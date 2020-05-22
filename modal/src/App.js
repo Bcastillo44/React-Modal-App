@@ -4,9 +4,17 @@ import React, { Component } from 'react';
 import './App.css';
 import './Advice.css';
 import './AdviceTwo.css';
+import './AdviceThree.css';
+import './AdviceFour.css';
+import './AdviceFive.css';
+import './AdviceSix.css';
+import './AdviceSeven.css';
+import './AdviceEight.css';
+import './AdviceNine.css';
+
 import Advice from './Advice.js';
-import AdviceTwo from './AdviceTwo.js';
-import AdviceThree from './AdviceThree.js';
+import Modal from './Modal.js';
+
 
 class App extends Component {
 
@@ -15,22 +23,18 @@ class App extends Component {
 
     this.state = {
       show: false, 
-      // advice: "",  
-      // adviceTwo: "data.slip.advice",
-      // adviceThree: "data.slip.advice"
+      advice: "",  
     }
 
   };
   
-  
-  showModal = () => {
+  showModal = (event) => {
     this.setState({ show: true});
   }
   
-  hideModal = () => {
+  hideModal = (event) => {
     this.setState({ show: false });
   }
-
 
   componentDidMount(){
     let url = "https://api.adviceslip.com/advice";
@@ -57,7 +61,6 @@ class App extends Component {
     });
   }
 
-
  
 render() {
 
@@ -74,11 +77,26 @@ render() {
           <Advice advice={this.state.advice}/>
         </Modal>
         
+      
+        <button type='button' className="newAdvice" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>1</button>
+        
+        <button type='button' className="newAdviceTwo" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>2</button>
 
-        <button type='button' className="newAdvice" onClick={this.showModal}>8</button>
-        <button type='button' className="newAdviceTwo" onClick={this.showModal}>9</button>
+        <button type='button' className="newAdviceThree" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>3</button>
 
-       {/* <button type="submit" className="newAdvice" onClick={this.handleNewAdvice}>8</button> */}
+        <button type='button' className="newAdviceFour" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>4</button>
+
+        <button type='button' className="newAdviceFive" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>5</button>
+
+        <button type='button' className="newAdviceSix" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>6</button>
+
+        <button type='button' className="newAdviceSeven" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>7</button>
+
+        <button type='button' className="newAdviceEight" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>8</button>
+
+        <button type='button' className="newAdviceNine" onClick= { () => {this.showModal(); this.handleNewAdvice()}}>9</button>
+    
+
     
         </div>
       </div> 
@@ -87,20 +105,8 @@ render() {
   
 }
 
-  const Modal = ({ handleClose, show, children, }) => {
-  const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
-  return (
-    <div className={showHideClassName}>
-      <section className='modal-main'>
-        {children}
-        <button onClick={handleClose}>
-          Close
-        </button>
-      </section>
-    </div>
-  );
-};
+
   
 
 

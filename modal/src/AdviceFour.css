@@ -1,8 +1,8 @@
-.newAdvice{
+.newAdviceFour{
 
     justify-content: center;
     color: black;
-    background-color: yellow;
+    background-color: rgb(101, 16, 101);
     position: relative;
     border: 1px solid grey;
     box-shadow: 5px 10px 18px #888888;
@@ -15,6 +15,7 @@
     
     
 }
+
 @keyframes shake{
 	0%,30%,50%{
 		transform: translateX(10px);

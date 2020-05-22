@@ -1,19 +1,18 @@
-.newAdviceTwo{
+.newAdviceSeven{
 
     justify-content: center;
     color: black;
-    background-color: rgb(6, 6, 193);
+    background-color: rgb(85, 8, 8);
     position: relative;
     border: 1px solid grey;
     box-shadow: 5px 10px 18px #888888;
-    margin: 20px;
+    margin: 100px;
     padding: 30px 40px;
     border-radius: 50px;
     font-size: 30px;
     font-weight: 700;
     animation: shake 1s linear;
-    
-    
+
 }
 
 @keyframes shake{
