@@ -71,6 +71,7 @@ render() {
         <div className="App">
 
         <h1> You Have Come to the "Pool of Advice"</h1>
+        <h2> Click any Cue Ball to get Advice"</h2>
 
     
         <Modal show={this.state.show} handleClose={this.hideModal} >

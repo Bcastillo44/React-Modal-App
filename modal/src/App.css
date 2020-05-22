@@ -28,6 +28,17 @@ h1{
     
 }
 
+h2{
+
+  font-size: 40px;
+  margin: 50px;
+  border: 1px solid grey;
+  box-shadow: 5px 10px 10px #a6a6a6;
+  background: white;
+  border-radius: 10px;
+    
+}
+
 
 .modal {
   position: absolute;
